@@ -34,7 +34,7 @@ h2 {
   /* 立体感を出す影 */
   text-align: center;
 
-  font-size: 40px;
+  font-size: 35px;
   font-family: "map-roman-normal", serif;
   font-weight: 400;
   font-style: normal;
@@ -302,10 +302,10 @@ footer {
   /* 見出しのサイズを縮小 */
   h1,
   h2 {
-    font-size: 20px; /* 見出しを小さくする */
+    font-size: 17px; /* 見出しを小さくする */
   }
   p{
-    font-size: 15px;
+    font-size: 12px;
     margin-bottom: 0px;
   }
 
