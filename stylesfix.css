@@ -45,7 +45,7 @@ p {
   color: #d4af37;
   /* 標準金色 */
   text-align: center;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   font-size: 20px;
 
   font-family: "a-otf-ryumin-pr6n", serif;
@@ -80,10 +80,21 @@ a:hover {
   border: 1px solid #444;
   border-radius: 8px;
   padding: 40px;
-  margin: 0 auto 60px;
+  margin: 20px auto;
   box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.3); /* 金色の影 */
   max-width: 1200px; /* 最大幅 */
   position: relative;
+ 
+}
+.NFT_Panel{
+  max-width: 250px; /* 画像の最大幅 */
+  height: auto; /* 高さを自動調整 */
+  
+  border-radius: 2px; /* 角を丸くする */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* スマホの立体感を演出する影 */
+  box-shadow: 0 0 15px 5px rgba(201, 199, 193, 0.8),
+    0 0 30px 10px rgba(117, 107, 113, 0.1); /* 光るエフェクトを追加 */
+  border: 2px solid #202020; /* 薄い枠線でスマホの枠を表現 */
 }
 
 /* 左右に要素を配置 */
@@ -131,7 +142,7 @@ a:hover {
   height: 500px;
   object-fit: cover;
   border: 2px solid transparent; /* ベースの枠線（透明） */
-  border-radius: 15px; /* 角を少し丸くして高級感をプラス */
+  border-radius: 3px; /* 角を少し丸くして高級感をプラス */
   box-shadow: 0 0 15px 5px rgba(201, 199, 193, 0.8),
     0 0 30px 10px rgba(117, 107, 113, 0.5); /* 光るエフェクトを追加 */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* ホバー時のアニメーション */
@@ -195,44 +206,13 @@ a:hover {
   background-color: #111;
   text-align: center;
   padding: 20px;
+  margin: 50px auto;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.3);
 }
-
-.styled-button {
+.styled-button{
   display: inline-block;
-  padding: 12px 24px;
-
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: #fff;
-  background: linear-gradient(45deg, #4e9af1, #2a73d4);
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  text-align: center;
-  line-height: 1.5; /* 高さを文字の縦位置に合わせる */
-}
-
-.styled-button:hover {
-  background: linear-gradient(
-    45deg,
-    #2a73d4,
-    #4e9af1
-  ); /* グラデーションを反転 */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* 影を強調 */
-  transform: translateY(-2px); /* 少し浮き上がる */
-}
-
-.styled-button:active {
-  transform: translateY(1px); /* 押し込み感を演出 */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 影を小さく */
-}
-
-.luxury-button {
-  display: inline-block;
-  padding: 15px 30px; /* ボタンの内側の余白 */
+  padding: 15px 50px; /* ボタンの内側の余白 */
   margin-top: 10px;
   font-size: 1.5rem; /* フォントサイズ */
   font-weight: bold; /* 太字 */
@@ -248,8 +228,23 @@ a:hover {
   transition: all 0.3s ease; /* ホバー時のアニメーション */
   text-align: center; /* 中央揃え */
 }
+.luxury-button {
+  display: inline-block;
+  padding: 10px 70px; /* ボタンの内側の余白 */
+  margin-top: 10px;
+  font-size:15px; /* フォントサイズ */
+  font-weight: bold; /* 太字 */
+  text-decoration: none; /* 下線を消す */
+  color: #fff; /* 文字色を白に */
+  border: 2px solid white; 
+ /* ゴールドのグラデーション */
+  border-radius: 10px; /* ボタンの角を丸く */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* 影を追加して浮き上がるように */
+  transition: all 0.3s ease; /* ホバー時のアニメーション */
+  text-align: center; /* 中央揃え */
+}
 
-.luxury-button:hover {
+.luxury-button:hover,.styled-button:hover {
   background: linear-gradient(
     45deg,
     #f0c674,
@@ -259,12 +254,10 @@ a:hover {
   transform: translateY(-3px); /* 少し浮き上がるように */
 }
 
-.luxury-button:active {
-  transform: translateY(1px); /* クリック時の押し込み感 */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 影を小さく */
-}
+
 .text_adjust {
   padding-top: 4px;
+  width: 150px;
 }
 footer {
   background-color: #17201d; /* 背景色 */
@@ -284,9 +277,8 @@ footer {
 .wsp {
   height: 70px;
 }
-.zexa {
-  height: 60px;
-  
+.wsp-desc {
+  font-size: 12px;
 }
 .mini_img{
   position: absolute;
@@ -318,23 +310,29 @@ footer {
   /* ボタン（Luxury Button）サイズ調整 */
   .luxury-button {
     padding: 10px 20px; /* 内側の余白を減らす */
-    font-size: 1.2rem; /* フォントサイズを小さく */
+    font-size: 0.7rem; /* フォントサイズを小さく */
     border-radius: 8px; /* ボタンの丸みを少し減らす */
   }
 
   /* ボタン（Styled Button）サイズ調整 */
   .styled-button {
-    padding: 8px 16px; /* 内側の余白を減らす */
-    font-size: 1rem; /* フォントサイズを小さく */
+    padding: 10px 30px; /* 内側の余白を減らす */
+    font-size: 0.9rem; /* フォントサイズを小さく */
     border-radius: 6px; /* ボタンの丸みを少し減らす */
   }
 
   /* コンテンツボックスの幅調整 */
   .top-menu,
-  .getHowTo-menu,
+  .getHowTo-menu
+  {
+    padding: 20px; /* 内側の余白を減らす */
+    margin: 20px auto 50px auto; /* 上下の外側の余白を縮小 */
+    max-width: 80%; /* 幅をデバイスに合わせる */
+    box-shadow: 0px 0px 5px rgba(255, 215, 0, 0.2); /* 影を軽くする */
+  }
   .go-ARpage{
     padding: 20px; /* 内側の余白を減らす */
-    margin: 20px auto; /* 上下の外側の余白を縮小 */
+    margin: 20px auto 50px auto; /* 上下の外側の余白を縮小 */
     max-width: 80%; /* 幅をデバイスに合わせる */
     box-shadow: 0px 0px 5px rgba(255, 215, 0, 0.2); /* 影を軽くする */
   }
@@ -413,9 +411,15 @@ footer {
 .wsp {
   height: 40px;
 }
-.zexa {
-  height: 30px;
-  
+.text_adjust {
+  padding-top: 0px;
+}
+.wsp-desc {
+  font-size: 5px;
+}
+.NFT_Panel{
+  max-width: 220px; /* 画像の最大幅 */
+ 
 }
 
 }
