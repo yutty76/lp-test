@@ -165,14 +165,16 @@ a:hover {
   width: 30px;
   z-index: 10;
   height: 100dvh; /* 動的ビューポートの高さを使用 */
-  will-change: transform; /* GPU最適化 */
+ 
 }
 
+/* 画像のスタイル */
 .side-image img {
   width: 100%;
   position: absolute;
   animation: scrollLoop 30s linear infinite;
-  animation-delay: 0.1s; /* 遅延を加えて確実に開始 */
+  animation-delay: 0.1s;
+  will-change: transform; /* 最適化 */
 }
 
 /* 左側サイド画像 */
