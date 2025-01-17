@@ -171,7 +171,7 @@ a:hover {
 
 .side-image img {
   width: 100%;
-  position: fixed;
+  position: absolute;
   animation: scrollLoop 30s linear infinite;
 }
 
@@ -376,7 +376,7 @@ footer {
   .store-links {
     
     gap: 5px; /* アイコン間の間隔を調整 */
-    margin: 0 auto;
+    max-width: 80%;
   }
 .app-icon{
   height: 40px;
