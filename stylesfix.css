@@ -164,7 +164,7 @@ a:hover {
   bottom: 0;
   width: 30px;
   z-index: 10;
-
+  height: 100dvh; /* 動的ビューポートの高さを使用 */
   will-change: transform; /* GPU最適化 */
 }
 
@@ -186,13 +186,12 @@ a:hover {
   transform: scaleY(-1); /* 上下反転解除 */
 }
 
-/* スクロールアニメーション */
 @keyframes scrollLoop {
   from {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translateY(-50%);
+    transform: translate3d(0, -50%, 0);
   }
 }
 
