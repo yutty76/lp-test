@@ -302,10 +302,10 @@ footer {
   /* 見出しのサイズを縮小 */
   h1,
   h2 {
-    font-size: 15px; /* 見出しを小さくする */
+    font-size: 13px; /* 見出しを小さくする */
   }
   p{
-    font-size: 12px;
+    font-size: 11px;
     margin-bottom: 0px;
   }
 
