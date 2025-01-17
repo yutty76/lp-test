@@ -253,14 +253,16 @@ a:hover {
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); /* ホバー時に影を濃く */
   transform: translateY(-3px); /* 少し浮き上がるように */
 }
-
+.cation{
+  font-size: 15px;
+}
 
 .text_adjust {
   padding-top: 4px;
   width: 150px;
 }
 footer {
-  background-color: #17201d; /* 背景色 */
+  background-color: #111; /* 背景色 */
   color: #fff; /* テキスト色 */
   display: flex;
 
@@ -400,11 +402,11 @@ footer {
     row-gap: 10px; 
   }
   footer{
-    padding: 20px;
+    padding: 20px 40px;
   }
   .footer-logo{
    
-    column-gap: 20px;
+    column-gap: 20px ;
     
 }
 
@@ -415,11 +417,14 @@ footer {
   padding-top: 0px;
 }
 .wsp-desc {
-  font-size: 5px;
+  font-size:7px;
 }
 .NFT_Panel{
-  max-width: 220px; /* 画像の最大幅 */
+  max-width: 200px; /* 画像の最大幅 */
  
+}
+.cation{
+  font-size: 10px;
 }
 
 }
