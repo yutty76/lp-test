@@ -84,7 +84,6 @@ a:hover {
   box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.3); /* 金色の影 */
   max-width: 1200px; /* 最大幅 */
   position: relative;
- 
 }
 .NFT_Panel{
   max-width: 250px; /* 画像の最大幅 */
@@ -213,7 +212,7 @@ a:hover {
 .styled-button{
   display: inline-block;
   padding: 15px 50px; /* ボタンの内側の余白 */
-  margin-top: 10px;
+  
   font-size: 1.5rem; /* フォントサイズ */
   font-weight: bold; /* 太字 */
   text-decoration: none; /* 下線を消す */
@@ -295,14 +294,14 @@ footer {
 @media (max-width: 1000px) {
   /* ボディの余白を調整 */
   body {
-    font-size: 14px; /* 全体のフォントサイズを縮小 */
+    font-size: 15px; /* 全体のフォントサイズを縮小 */
     line-height: 1.4; /* 行間を調整 */
   }
 
   /* 見出しのサイズを縮小 */
   h1,
   h2 {
-    font-size: 13px; /* 見出しを小さくする */
+    font-size: 15px; /* 見出しを小さくする */
   }
   p{
     font-size: 11px;
@@ -342,8 +341,8 @@ footer {
   .howTo-Step
   {
     padding: 0px; /* 内側の余白を減らす */
-    margin: 20px auto; /* 上下の外側の余白を縮小 */
-    max-width: 90%; /* 幅をデバイスに合わせる */
+    margin:20px auto; /* 上下の外側の余白を縮小 */
+    max-width: 95%; /* 幅をデバイスに合わせる */
     box-shadow: 0px 0px 5px rgba(255, 215, 0, 0.2); /* 影を軽くする */
   }
 
@@ -426,5 +425,10 @@ footer {
 .cation{
   font-size: 10px;
 }
+.details-link {
+  
+  margin-top: 10px;
+}
+
 
 }
