@@ -1,0 +1,223 @@
+/* 全体リセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* サイト全体の背景と文字色 */
+body {
+  background-color: #000;
+  /* 背景色：黒 */
+  /* color: #ffffff;
+  /* 文字色：金色 */
+  font-family: Arial, sans-serif;
+  /* 読みやすいフォント */
+  line-height: 1.6; 
+}
+
+/* 見出しスタイル */
+h1,
+h2 {
+  color: #ffd700;
+  /* 明るい金色 */
+  text-shadow: 1px 1px 2px #b8860b;
+  /* 立体感を出す影 */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-family: "map-roman-normal", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+/* 通常の段落スタイル */
+p {
+  color: #d4af37;
+  /* 標準金色 */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+
+  font-family: "a-otf-ryumin-pr6n", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* リンクスタイル */
+a {
+  color: #ffd700;
+  /* リンクの色: 金色 */
+  text-decoration: none;
+  /* 下線を消す */
+  transition: color 0.3s ease;
+  /* 色変更を滑らかに */
+  cursor: pointer;
+  /* カーソルを指の形にする */
+}
+
+a:hover {
+  color: #ffcc00;
+  /* ホバー時: より明るい金色 */
+}
+
+/* ボックス（手順やセクション） */
+.top-menu,
+.getHowTo-menu,
+.howTo-Step,
+.go-ARpage {
+  background-color: #111;
+  /* ダークグレーで区切り感を出す */
+  border: 1px solid #444;
+  /* ボーダー */
+  border-radius: 8px;
+  padding: 40px;
+  margin: 60px auto;
+  box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.3);
+  /* 金色の影 */
+  max-width: 1300px;
+  /* 最大幅 */
+}
+.container1 {
+  display: flex;
+  justify-content: space-between; /* 子要素間のスペースを調整 */
+  align-items: center; /* 子要素を垂直方向に中央揃え */
+  gap: 20px; /* 子要素間のスペース */
+}
+.store-links {
+  display: flex;
+  flex-direction: column; /* 縦方向にアイコンを配置 */
+  align-items: center;
+  gap: 10px; /* アイコン間のスペース */
+}
+/* 手順ステップのスタイル */
+.howTo-Step {
+  display: flex;
+  flex-direction: column; /* 縦方向に揃える */
+  justify-content: space-between; /* 上部と下部に分ける */
+  flex: 1; /* 右側のコンテンツを調整 */
+}
+.container2 {
+  display: flex;
+  justify-content: space-between; /* 左右に要素を配置 */
+  align-items: flex-start; /* 垂直方向に上揃え */
+  gap: 20px; /* 左右のコンテンツ間のスペース */
+}
+
+.howTo-Step {
+  display: flex;
+  width: 100%;
+}
+
+.container_Left {
+  flex: 1; /* 左側の領域を調整 */
+}
+
+.container_Right {
+  flex: 1; /* 右側の領域を調整 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+
+
+/* 画像スタイル */
+img {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+}
+
+/* ストアアイコンとアプリアイコン */
+.store-icon,
+.app-icon {
+  height: 100px;
+  margin: 15px;
+}
+
+/* NFTパネル */
+.nft-panel {
+  height: 600px;
+  object-fit: cover;
+}
+
+/* スクリーンショット画像 */
+.screenImg {
+  max-width: 20%; /* 画像を左側に大きく表示 */
+  height: auto;
+}
+
+/* サイド画像スタイル */
+.side-image {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  /* サイドバーの幅を細くする（例: 60px） */
+  overflow: hidden;
+  z-index: 10;
+}
+
+.side-image img {
+  width: 100%;
+  opacity: 5;
+  /* 少し透過 */
+  position: absolute;
+  animation: scrollLoop 30s linear infinite;
+  /* スクロールアニメーション */
+}
+
+/* 左側サイド画像 */
+.side-image.left {
+  left: 0;
+}
+
+/* 右側サイド画像 */
+.side-image.right {
+  right: 0;
+  transform: scaleY(-1);
+  /* 上下反転解除 */
+}
+
+/* スクロールアニメーション */
+@keyframes scrollLoop {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+/* 詳しい操作方法セクション */
+.details-link {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.details-link h2 {
+  font-size: 1.5rem;
+  color: #ffd700;
+  text-shadow: 1px 1px 2px #b8860b;
+}
+
+/* ARページセクション */
+.go-ARpage {
+  background-color: #111;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.3);
+}
+
+.go-ARpage h1 {
+  margin-top: 10px;
+}

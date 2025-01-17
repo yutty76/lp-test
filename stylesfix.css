@@ -1,0 +1,421 @@
+/* 全体リセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 動画を画面全体にカバー */
+  z-index: -1; /* 背景として他の要素の後ろに配置 */
+}
+/* サイト全体の背景と文字色 */
+body {
+  background-color: #000000;
+  /* 背景色：黒 */
+  /* color: #ffffff;
+    /* 文字色：金色 */
+  font-family: Arial, sans-serif;
+  /* 読みやすいフォント */
+  line-height: 1.6;
+}
+
+/* 見出しスタイル */
+h1,
+h2 {
+  color: #ffd700;
+  /* 明るい金色 */
+  text-shadow: 1px 1px 2px #b8860b;
+  /* 立体感を出す影 */
+  text-align: center;
+
+  font-size: 40px;
+  font-family: "map-roman-normal", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* 通常の段落スタイル */
+p {
+  color: #d4af37;
+  /* 標準金色 */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+
+  font-family: "a-otf-ryumin-pr6n", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* リンクスタイル */
+a {
+  color: #ffd700;
+  /* リンクの色: 金色 */
+  text-decoration: none;
+  /* 下線を消す */
+  transition: color 0.3s ease;
+  /* 色変更を滑らかに */
+  cursor: pointer;
+  /* カーソルを指の形にする */
+}
+
+a:hover {
+  color: #ffcc00; /* ホバー時: より明るい金色 */
+}
+.h1_text {
+  margin-bottom: 20px;
+}
+/* コンテンツ全体のボックススタイル */
+.top-menu,
+.getHowTo-menu,
+.howTo-Step,
+.go-ARpage {
+  background-color: rgba(17, 17, 17, 0.9); /* ダークグレーで区切り感を出す */
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 40px;
+  margin: 0 auto 60px;
+  box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.3); /* 金色の影 */
+  max-width: 1200px; /* 最大幅 */
+  position: relative;
+}
+
+/* 左右に要素を配置 */
+.container1 {
+  display: flex;
+  justify-content: center;
+
+  gap: 20px;
+  column-gap: 40px;
+}
+
+.howTo-Step {
+  display: flex;
+  column-gap: 40px;
+}
+.container_Left {
+  padding-left: 30px;
+}
+.container_Right {
+  flex: 1; /* 右側を広げる */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 水平方向の中央揃え */
+  justify-content: center; /* 垂直方向の中央揃え */
+  text-align: center; /* テキストの中央揃え */
+}
+
+/* ストアアイコン */
+.store-links {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center; /* 横方向の中央揃え */
+  gap: 10px;
+}
+
+.store-icon,
+.app-icon {
+  height: 50px;
+  margin: 15px;
+}
+
+
+.nft-panel {
+  height: 500px;
+  object-fit: cover;
+  border: 2px solid transparent; /* ベースの枠線（透明） */
+  border-radius: 15px; /* 角を少し丸くして高級感をプラス */
+  box-shadow: 0 0 15px 5px rgba(201, 199, 193, 0.8),
+    0 0 30px 10px rgba(117, 107, 113, 0.5); /* 光るエフェクトを追加 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* ホバー時のアニメーション */
+}
+
+.screenImg {
+  max-width: 250px; /* 画像の最大幅 */
+  height: auto; /* 高さを自動調整 */
+  
+  border-radius: 15px; /* 角を丸くする */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* スマホの立体感を演出する影 */
+  box-shadow: 0 0 15px 5px rgba(201, 199, 193, 0.8),
+    0 0 30px 10px rgba(117, 107, 113, 0.1); /* 光るエフェクトを追加 */
+  border: 2px solid #202020; /* 薄い枠線でスマホの枠を表現 */
+}
+
+/* サイド画像スタイル */
+.side-image {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  z-index: 10;
+}
+
+.side-image img {
+  width: 100%;
+  position: absolute;
+  animation: scrollLoop 30s linear infinite;
+}
+
+/* 左側サイド画像 */
+.side-image.left {
+  left: 0;
+}
+
+/* 右側サイド画像 */
+.side-image.right {
+  right: 0;
+  transform: scaleY(-1); /* 上下反転解除 */
+}
+
+/* スクロールアニメーション */
+@keyframes scrollLoop {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+/* 詳しい操作方法セクション */
+.details-link {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* ARページセクション */
+.go-ARpage {
+  background-color: #111;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.3);
+}
+
+.styled-button {
+  display: inline-block;
+  padding: 12px 24px;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(45deg, #4e9af1, #2a73d4);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  text-align: center;
+  line-height: 1.5; /* 高さを文字の縦位置に合わせる */
+}
+
+.styled-button:hover {
+  background: linear-gradient(
+    45deg,
+    #2a73d4,
+    #4e9af1
+  ); /* グラデーションを反転 */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* 影を強調 */
+  transform: translateY(-2px); /* 少し浮き上がる */
+}
+
+.styled-button:active {
+  transform: translateY(1px); /* 押し込み感を演出 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 影を小さく */
+}
+
+.luxury-button {
+  display: inline-block;
+  padding: 15px 30px; /* ボタンの内側の余白 */
+  margin-top: 10px;
+  font-size: 1.5rem; /* フォントサイズ */
+  font-weight: bold; /* 太字 */
+  text-decoration: none; /* 下線を消す */
+  color: #fff; /* 文字色を白に */
+  background: linear-gradient(
+    45deg,
+    #b08d57,
+    #f0c674
+  ); /* ゴールドのグラデーション */
+  border-radius: 10px; /* ボタンの角を丸く */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* 影を追加して浮き上がるように */
+  transition: all 0.3s ease; /* ホバー時のアニメーション */
+  text-align: center; /* 中央揃え */
+}
+
+.luxury-button:hover {
+  background: linear-gradient(
+    45deg,
+    #f0c674,
+    #b08d57
+  ); /* ホバー時に逆のグラデーション */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); /* ホバー時に影を濃く */
+  transform: translateY(-3px); /* 少し浮き上がるように */
+}
+
+.luxury-button:active {
+  transform: translateY(1px); /* クリック時の押し込み感 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 影を小さく */
+}
+.text_adjust {
+  padding-top: 4px;
+}
+footer {
+  background-color: #17201d; /* 背景色 */
+  color: #fff; /* テキスト色 */
+  display: flex;
+
+  padding: 30px 0;
+  justify-content: center; /* 垂直方向の中央揃え */
+  
+}
+.footer-logo{
+    display: flex;
+    column-gap: 50px;
+    align-items: center;
+}
+
+.wsp {
+  height: 70px;
+}
+.zexa {
+  height: 60px;
+  
+}
+.mini_img{
+  position: absolute;
+   z-index: 10; 
+   height: 160px;
+    bottom: 1px; 
+    right: 1px;
+    pointer-events: none;
+}
+
+/* スマホサイズ対応 */
+@media (max-width: 1000px) {
+  /* ボディの余白を調整 */
+  body {
+    font-size: 14px; /* 全体のフォントサイズを縮小 */
+    line-height: 1.4; /* 行間を調整 */
+  }
+
+  /* 見出しのサイズを縮小 */
+  h1,
+  h2 {
+    font-size: 20px; /* 見出しを小さくする */
+  }
+  p{
+    font-size: 15px;
+    margin-bottom: 0px;
+  }
+
+  /* ボタン（Luxury Button）サイズ調整 */
+  .luxury-button {
+    padding: 10px 20px; /* 内側の余白を減らす */
+    font-size: 1.2rem; /* フォントサイズを小さく */
+    border-radius: 8px; /* ボタンの丸みを少し減らす */
+  }
+
+  /* ボタン（Styled Button）サイズ調整 */
+  .styled-button {
+    padding: 8px 16px; /* 内側の余白を減らす */
+    font-size: 1rem; /* フォントサイズを小さく */
+    border-radius: 6px; /* ボタンの丸みを少し減らす */
+  }
+
+  /* コンテンツボックスの幅調整 */
+  .top-menu,
+  .getHowTo-menu,
+  .go-ARpage{
+    padding: 20px; /* 内側の余白を減らす */
+    margin: 20px auto; /* 上下の外側の余白を縮小 */
+    max-width: 80%; /* 幅をデバイスに合わせる */
+    box-shadow: 0px 0px 5px rgba(255, 215, 0, 0.2); /* 影を軽くする */
+  }
+  
+  .howTo-Step
+  {
+    padding: 0px; /* 内側の余白を減らす */
+    margin: 20px auto; /* 上下の外側の余白を縮小 */
+    max-width: 90%; /* 幅をデバイスに合わせる */
+    box-shadow: 0px 0px 5px rgba(255, 215, 0, 0.2); /* 影を軽くする */
+  }
+
+  /* Flexboxレイアウトの調整 */
+  .container1 {
+    flex-direction: column; /* 縦並びに変更 */
+    gap: 0px; /* 要素間の余白を縮小 */
+    max-width: 100%;
+    width: auto;
+  
+  }
+  .h1_text {
+    margin-bottom: 0px;
+  }
+  .howTo-Step {
+    flex-direction: column; /* 縦並びに変更 */
+    column-gap: 0; /* 列の間隔をなくす */
+    row-gap: 0px; /* 行の間隔を追加 */
+  }
+
+  /* 画像スタイルの調整 */
+  .screenImg,.nft-panel {
+    max-width: 70%; /* 画像の幅を縮小 */
+    height: auto;
+    margin: 0 auto; /* 画像を中央揃え */
+  }
+
+  /* ストアアイコンの調整 */
+  .store-links {
+    
+    gap: 5px; /* アイコン間の間隔を調整 */
+  }
+.app-icon{
+  height: 40px;
+  margin: 5px;
+}
+  .store-icon {
+    height: 35px; /* アイコンのサイズを小さく */
+    margin: 5px;
+  }
+
+  /* サイド画像（上下スクロール調整） */
+ 
+  .mini_img{
+    display: none;
+  }
+  .container_Left {
+    display: flex; /* フレックスボックスを使用 */
+    justify-content: center; /* 横方向に中央揃え */
+    align-items: center; /* 縦方向に中央揃え */
+    padding:30px 0 20px 0; /* 余計な内側余白を削除 */
+    
+  }
+  .container_Right{
+    padding: 0 30px 20px ;
+    row-gap: 10px; 
+  }
+  footer{
+    padding: 20px;
+  }
+  .footer-logo{
+   
+    column-gap: 20px;
+    
+}
+
+.wsp {
+  height: 40px;
+}
+.zexa {
+  height: 30px;
+  
+}
+
+}
