@@ -238,18 +238,6 @@
     </footer>
     <p style="color:white;">©︎2025 WORLD SCAN PROJECT</p>
 
-    <script>
-      function restartSideImageAnimation() {
-          document.querySelectorAll('.side-image img').forEach(img => {
-              img.style.animation = 'none';
-              void img.offsetWidth; // 強制的にリフローを発生させる
-              img.style.animation = 'scrollLoop 30s linear infinite';
-          });
-      }
-
-      // ページ遷移後にアニメーションを強制リセット
-      window.addEventListener('load', restartSideImageAnimation);
-      document.addEventListener('DOMContentLoaded', restartSideImageAnimation);
-  </script>
+  
   </body>
 </html>
