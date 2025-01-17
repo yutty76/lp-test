@@ -172,6 +172,7 @@ a:hover {
   width: 100%;
   position: absolute;
   animation: scrollLoop 30s linear infinite;
+  animation-delay: 0.1s; /* 遅延を加えて確実に開始 */
 }
 
 /* 左側サイド画像 */
