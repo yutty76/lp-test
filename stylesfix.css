@@ -302,7 +302,7 @@ footer {
   /* 見出しのサイズを縮小 */
   h1,
   h2 {
-    font-size: 17px; /* 見出しを小さくする */
+    font-size: 15px; /* 見出しを小さくする */
   }
   p{
     font-size: 12px;
@@ -398,7 +398,7 @@ footer {
     
   }
   .container_Right{
-    padding: 0 30px 20px ;
+    padding: 0 20px 20px ;
     row-gap: 10px; 
   }
   footer{
@@ -420,7 +420,7 @@ footer {
   font-size:7px;
 }
 .NFT_Panel{
-  max-width: 200px; /* 画像の最大幅 */
+  max-width: 70%; /* 画像の最大幅 */
  
 }
 .cation{
