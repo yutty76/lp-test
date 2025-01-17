@@ -80,7 +80,7 @@ a:hover {
   border: 1px solid #444;
   border-radius: 8px;
   padding: 40px;
-  margin: 20px auto;
+  margin: 30px auto;
   box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.3); /* 金色の影 */
   max-width: 1200px; /* 最大幅 */
   position: relative;
@@ -160,7 +160,7 @@ a:hover {
 
 /* サイド画像スタイル */
 .side-image {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   width: 30px;
@@ -327,7 +327,7 @@ footer {
   .getHowTo-menu
   {
     padding: 20px; /* 内側の余白を減らす */
-    margin: 20px auto 50px auto; /* 上下の外側の余白を縮小 */
+    margin: 20px auto 40px auto; /* 上下の外側の余白を縮小 */
     max-width: 80%; /* 幅をデバイスに合わせる */
     box-shadow: 0px 0px 5px rgba(255, 215, 0, 0.2); /* 影を軽くする */
   }
