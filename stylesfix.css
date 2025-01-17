@@ -160,7 +160,7 @@ a:hover {
 
 /* サイド画像スタイル */
 .side-image {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   width: 30px;
@@ -181,7 +181,7 @@ a:hover {
 /* 右側サイド画像 */
 .side-image.right {
   right: 0;
-  transform: scaleY(-1); /* 上下反転解除 */
+ /* transform: scaleY(-1); /* 上下反転解除 */
 }
 
 /* スクロールアニメーション */
