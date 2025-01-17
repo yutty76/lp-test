@@ -238,24 +238,6 @@
     </footer>
     <p style="color:white;">©︎2025 WORLD SCAN PROJECT</p>
 
-    <script>
-      let ticking = false;
     
-      function adjustSideImageHeight() {
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            document.querySelectorAll('.side-image').forEach(el => {
-              el.style.height = `${window.innerHeight}px`;
-            });
-            ticking = false;
-          });
-          ticking = true;
-        }
-      }
-    
-      // 高さの調整を最適化
-      window.addEventListener('resize', adjustSideImageHeight);
-      window.addEventListener('load', adjustSideImageHeight);
-    </script>
   </body>
 </html>
