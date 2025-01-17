@@ -165,13 +165,13 @@ a:hover {
   bottom: 0;
   width: 30px;
   z-index: 10;
-  height: 100dvh; /* ビューポートの高さに追従 */
+  
   will-change: transform; /* GPU最適化 */
 }
 
 .side-image img {
   width: 100%;
-  position: absolute;
+  position: fixed;
   animation: scrollLoop 30s linear infinite;
 }
 
@@ -376,6 +376,7 @@ footer {
   .store-links {
     
     gap: 5px; /* アイコン間の間隔を調整 */
+    margin: 0 auto;
   }
 .app-icon{
   height: 40px;
